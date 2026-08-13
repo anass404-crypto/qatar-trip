@@ -56,6 +56,7 @@ export const REAL_PHOTOS = {
   planetTeensMia: "assets/img/planet-teens-mia.jpg",
   hotelTower: "assets/img/hotel-tower.jpg",
   caboodle: "assets/img/caboodle.jpg",
+  olioli: "assets/img/olioli.jpg",
 };
 
 // ---------- اليوم 0: الأحد 16 أغسطس — الوصول ومشيرب وكتارا والمدينة التعليمية ----------
@@ -101,7 +102,7 @@ const day0 = {
       paths: [
         { key: "kids", label: "الصغار", icon: "👧", items: [
           { id: "d0-10-kids-1", time: "17:20", timeEnd: "19:20", title: "OliOli في كتارا", category: "play",
-            desc: "جلسة ساعتين. 135 ريال للطفل، يشمل مرافقًا.", price: "135 ريال للطفل (يشمل مرافقًا)", duration: "ساعتان", cover: "katara",
+            desc: "جلسة ساعتين. 135 ريال للطفل، يشمل مرافقًا.", price: "135 ريال للطفل (يشمل مرافقًا)", duration: "ساعتان", cover: "olioli",
             highlights: ["جلسة ساعتين", "135 ريال للطفل، يشمل مرافقًا"] },
         ]},
         { key: "adults", label: "الكبار", icon: "🧑", items: [
