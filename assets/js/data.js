@@ -52,7 +52,7 @@ export const REAL_PHOTOS = {
   pool52: "assets/img/pool-52.jpg",
   rushPaintHouse: "assets/img/rush-paint-house.jpg",
   colorverse: "assets/img/colorverse.jpg",
-  msheireb: "assets/img/msheireb.jpg?v=13",
+  msheireb: "assets/img/msheireb.jpg?v=14",
   trapani: "assets/img/trapani.jpg",
   breakfast: "assets/img/breakfast.jpg",
   planetTeensMia: "assets/img/planet-teens-mia.jpg",
@@ -101,9 +101,9 @@ const day0 = {
       mapsUrl: "https://maps.google.com/?q=place_id:ChIJAfqz1UfDRT4RnSqB06dBnRE",
       highlights: ["تجربة ضوئية غامرة", "حد أقصى 15 شخصًا"] },
     { id: "d0-10a", time: "17:20", timeEnd: "18:00", title: "OliOli في كتارا (سوية)", category: "play", cover: "olioli",
-      desc: "40 دقيقة بدل الساعتين الكاملتين — اختصرناها عشان الجميع يكمل المدينة التعليمية بعدها بدل انقسام المسارات. 135 ريال للطفل، يشمل مرافقًا.",
+      desc: "40 دقيقة، 135 ريال للطفل، يشمل مرافقًا.",
       price: "135 ريال للطفل (يشمل مرافقًا)",
-      highlights: ["الآن الجميع سوية، بلا انقسام", "135 ريال للطفل، يشمل مرافقًا"] },
+      highlights: ["135 ريال للطفل، يشمل مرافقًا"] },
     { id: "d0-10b", time: "18:00", timeEnd: "18:20", title: "التوجه إلى المدينة التعليمية", category: "drive",
       desc: "حوالي 20 دقيقة من كتارا.", duration: "20 دقيقة", highlights: [] },
     { id: "d0-10c", time: "18:20", approx: true, timeEnd: "18:40", title: "صلاة المغرب في مسجد ذو المنارتين", category: "culture",
@@ -173,9 +173,9 @@ const day2 = {
       paths: [
         { key: "over3", label: "فوق 3 سنوات", icon: "🧒", items: [
           { id: "d2-4-over3-1", time: "12:00", timeEnd: "14:00", title: "Snow Dunes", category: "snow", cover: "snowDunes",
-            desc: "يفتح الساعة 12:00. المعدات متوفرة.", price: "89 ريال (سعر الثلاثاء المذكور في الخطة)",
+            desc: "يفتح الساعة 12:00. المعدات متوفرة.", price: "89 ريال",
             mapsUrl: "https://maps.google.com/?q=place_id:ChIJp6v9JRDdRT4RxHsq43W53po",
-            highlights: ["المعدات متوفرة بالمكان", "89 ريال — سعر الثلاثاء"] },
+            highlights: ["المعدات متوفرة بالمكان", "89 ريال"] },
         ]},
         { key: "toddlers", label: "الصغيران (سعد وبسام)", icon: "🧸", items: [
           { id: "d2-4-toddlers-1", time: "12:00", timeEnd: "14:00", title: "Caboodle", category: "play", cover: "caboodle",
