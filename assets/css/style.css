@@ -1,3 +1,40 @@
+@font-face {
+  font-family: "Thmanyah Sans";
+  src: url("../fonts/ThmanyahSans-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  /* لا يوجد وزن Regular في الملفات المتوفرة — نستخدم Medium كوزن افتراضي (400) */
+  font-family: "Thmanyah Sans";
+  src: url("../fonts/ThmanyahSans-Medium.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Thmanyah Sans";
+  src: url("../fonts/ThmanyahSans-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Thmanyah Sans";
+  src: url("../fonts/ThmanyahSans-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Thmanyah Sans";
+  src: url("../fonts/ThmanyahSans-Black.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --blue: #3E6AE1;
   --blue-ink: #2748A8;
@@ -27,7 +64,7 @@
 * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
 html { scroll-behavior: smooth; }
 body {
-  font-family: "IBM Plex Sans Arabic", -apple-system, "Segoe UI", Tahoma, Arial, sans-serif;
+  font-family: "Thmanyah Sans", -apple-system, "Segoe UI", Tahoma, Arial, sans-serif;
   background: var(--ash);
   color: var(--graphite);
   font-size: 15px;
