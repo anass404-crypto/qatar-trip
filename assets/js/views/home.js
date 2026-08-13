@@ -1,17 +1,17 @@
-import { DAYS, TRIP, REAL_PHOTOS } from "../data.js?v=5";
-import { el, ar, formatCountdown } from "../util.js?v=5";
+import { DAYS, TRIP, REAL_PHOTOS } from "../data.js?v=6";
+import { el, ar, formatCountdown } from "../util.js?v=6";
 import {
   tripPhase, currentDayIndex, getCurrentAndNext, buildDayBlocks, getBlockStatus,
   highlightActivities, tomorrowTeaser, getCover,
-} from "../schedule.js?v=5";
-import { renderTimeline } from "./timeline.js?v=5";
-import { openActivitySheet } from "./activitySheet.js?v=5";
-import { isTeaserDismissed, dismissTeaser } from "../store.js?v=5";
+} from "../schedule.js?v=6";
+import { renderTimeline } from "./timeline.js?v=6";
+import { openActivitySheet } from "./activitySheet.js?v=6";
+import { isTeaserDismissed, dismissTeaser } from "../store.js?v=6";
 
 function heroSection(now) {
   const phase = tripPhase(now);
   const dayIdx = currentDayIndex(now);
-  const img = el("img", { class: "hero-img", src: REAL_PHOTOS.heroDoha, alt: "", loading: "eager" });
+  const img = el("img", { class: "hero-img", src: REAL_PHOTOS.msheireb, alt: "", loading: "eager" });
   const body = el("div", { class: "hero-body" }, [
     el("div", { class: "hero-flag" }, "رحلة قطر 🇶🇦"),
     el("h1", { class: "hero-title" }, "رحلة قطر العائلية"),

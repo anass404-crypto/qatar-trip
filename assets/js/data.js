@@ -40,7 +40,6 @@ export const CATEGORY_STYLE = {
 
 // صور حقيقية موثّقة (Wikimedia Commons) لأماكن تحققنا منها سابقًا فقط — البقية Placeholder حتى تُستبدل من لوحة الإدارة
 export const REAL_PHOTOS = {
-  heroDoha: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Night_skylines_of_Doha_by_Ahmed_A._Ghaffar.jpg/1280px-Night_skylines_of_Doha_by_Ahmed_A._Ghaffar.jpg",
   katara: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Traditional_buildings_at_Katara_at_night.jpg/1280px-Traditional_buildings_at_Katara_at_night.jpg",
   mia: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Doha_Museum_of_Islamic_Arts_Exterior_51.jpg/1280px-Doha_Museum_of_Islamic_Arts_Exterior_51.jpg",
   // صور حقيقية أرسلها المستخدم لكل فعالية — مرفوعة داخل المستودع نفسه
@@ -267,4 +266,10 @@ export const EXCLUDED_SUGGESTIONS = [
 export const DEFAULT_ANNOUNCEMENTS = [];
 
 // لحظات ننتظرها — أبرز الفعاليات لواجهة الرئيسية
-export const HIGHLIGHT_IDS = ["d1-5", "d2-4-over3-1", "d2-7", "d2-9", "d2-2", "d0-6"];
+// كل الفعاليات الفعلية (بدون تنقلات/طريق/فنادق/طعام/صلاة) — بحسب طلب "كل الفعاليات غير الانتقالات والأكل ونحوه"
+export const HIGHLIGHT_IDS = [
+  "d0-5", "d0-6", "d0-9", "d0-10-kids-1", "d0-10-adults-1",
+  "d1-5",
+  "d2-2", "d2-4-over3-1", "d2-4-toddlers-1", "d2-7", "d2-9",
+  "d3-2",
+];
