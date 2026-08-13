@@ -52,7 +52,7 @@ export const REAL_PHOTOS = {
   pool52: "assets/img/pool-52.jpg",
   rushPaintHouse: "assets/img/rush-paint-house.jpg",
   colorverse: "assets/img/colorverse.jpg",
-  msheireb: "assets/img/msheireb.jpg?v=14",
+  msheireb: "assets/img/msheireb.jpg?v=15",
   trapani: "assets/img/trapani.jpg",
   breakfast: "assets/img/breakfast.jpg",
   planetTeensMia: "assets/img/planet-teens-mia.jpg",
@@ -171,13 +171,13 @@ const day2 = {
       desc: "20 دقيقة.", duration: "20 دقيقة", highlights: [] },
     { id: "d2-4", time: "12:00", timeEnd: "14:00", type: "split", title: "انقسام المسارات",
       paths: [
-        { key: "over3", label: "فوق 3 سنوات", icon: "🧒", items: [
+        { key: "over3", label: "الباقي", icon: "🧒", items: [
           { id: "d2-4-over3-1", time: "12:00", timeEnd: "14:00", title: "Snow Dunes", category: "snow", cover: "snowDunes",
             desc: "يفتح الساعة 12:00. المعدات متوفرة.", price: "89 ريال",
             mapsUrl: "https://maps.google.com/?q=place_id:ChIJp6v9JRDdRT4RxHsq43W53po",
             highlights: ["المعدات متوفرة بالمكان", "89 ريال"] },
         ]},
-        { key: "toddlers", label: "الصغيران (سعد وبسام)", icon: "🧸", items: [
+        { key: "toddlers", label: "سعد وبسام", icon: "🧸", items: [
           { id: "d2-4-toddlers-1", time: "12:00", timeEnd: "14:00", title: "Caboodle", category: "play", cover: "caboodle",
             desc: "لـ سعد وبسام. تنبيه: تأكد من انتهاء التجديدات.", phone: "44887233",
             highlights: ["خاص بـ سعد وبسام"] },
