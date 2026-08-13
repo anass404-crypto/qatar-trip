@@ -1,5 +1,5 @@
-import { el } from "../util.js?v=15";
-import { addSuggestion } from "../store.js?v=15";
+import { el } from "../util.js?v=16";
+import { addSuggestion } from "../store.js?v=16";
 
 const TYPES = ["فعالية جديدة", "مطعم", "تعديل موعد", "استبدال فعالية", "ملاحظة عامة"];
 
