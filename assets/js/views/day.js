@@ -1,6 +1,6 @@
-import { DAYS } from "../data.js?v=9";
-import { el } from "../util.js?v=9";
-import { renderTimeline } from "./timeline.js?v=9";
+import { DAYS } from "../data.js?v=10";
+import { el } from "../util.js?v=10";
+import { renderTimeline } from "./timeline.js?v=10";
 
 export function renderDay(root, idx) {
   const i = Math.max(0, Math.min(DAYS.length - 1, Number(idx) || 0));

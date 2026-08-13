@@ -1,5 +1,5 @@
-import { TRIP, REAL_PHOTOS } from "../data.js?v=9";
-import { el, ar } from "../util.js?v=9";
+import { TRIP, REAL_PHOTOS } from "../data.js?v=10";
+import { el, ar } from "../util.js?v=10";
 
 export function renderTrip(root) {
   const container = el("div", { class: "view-enter" });
@@ -33,7 +33,6 @@ export function renderTrip(root) {
     el("div", { class: "tag-title" }, "معلومات مهمة"),
     el("ul", { class: "info-list plain-card" }, [
       el("li", {}, "منفذ أبو سمرة: مفتوح 24 ساعة، المدة المتوقعة 30–60 دقيقة."),
-      el("li", {}, "يوم الأحد يحتاج سيارتين عند انقسام المسارات، أو سائقًا يعود إلى كتارا الساعة 7:20."),
       el("li", {}, "تذاكر قبة الثريا (Polaris) تفتح قبل العرض بيوم واحد فقط."),
       el("li", {}, "التسجيل في عرض Polaris قبل العرض بنصف ساعة شرط."),
     ]),
