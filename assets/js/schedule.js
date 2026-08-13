@@ -1,9 +1,9 @@
 // طبقة اشتقاق الجدول: تدمج بيانات data.js الثابتة مع تعديلات لوحة الإدارة (store.js)
 // وتحسب حالة كل فعالية (انتهت / الآن / قادمة) بحسب الوقت الحالي.
 
-import { DAYS, TRIP, CATEGORY_STYLE, REAL_PHOTOS, HIGHLIGHT_IDS } from "./data.js?v=6";
-import { timeToDate } from "./util.js?v=6";
-import { getActivityOverride, getActivityStatus } from "./store.js?v=6";
+import { DAYS, TRIP, CATEGORY_STYLE, REAL_PHOTOS, HIGHLIGHT_IDS } from "./data.js?v=7";
+import { timeToDate } from "./util.js?v=7";
+import { getActivityOverride, getActivityStatus } from "./store.js?v=7";
 
 // كل الفعاليات المفردة داخل يوم (بما فيها فروع الانقسام) بترتيب مسطّح — للبحث فقط
 export function allItemsOfDay(day) {
