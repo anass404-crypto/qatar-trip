@@ -11,7 +11,6 @@ export const TRIP = {
   route: "الدمام → الدوحة",
   days: 4,
   nights: 3,
-  code: "QATAR2026", // رمز الدخول المبسّط للمشاركين
   hotel: {
     name: "Aleph Doha Residences, Curio Collection by Hilton",
     mapsUrl: "https://maps.google.com/?q=Aleph+Doha+Residences+Curio+Collection+by+Hilton",

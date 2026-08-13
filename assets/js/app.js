@@ -1,4 +1,3 @@
-import { TRIP } from "./data.js";
 import { el } from "./util.js";
 import { getParticipant, setParticipant, getAnnouncements, subscribe } from "./store.js";
 import { tripPhase, currentDayIndex } from "./schedule.js";
@@ -28,21 +27,20 @@ function ensureParticipant() {
       style: "position:fixed;inset-inline:16px;top:50%;transform:translateY(-50%);background:var(--white);border-radius:20px;padding:26px 22px;z-index:61;box-shadow:var(--shadow-lg)",
     });
     const nameInput = el("input", { type: "text", placeholder: "اسمك" });
-    const codeInput = el("input", { type: "text", placeholder: "رمز الرحلة" });
     const err = el("div", { style: "color:var(--miss);font-size:12.5px;min-height:16px;margin-top:6px" });
-    const go = el("button", { class: "btn btn-primary btn-block", style: "margin-top:14px", onclick: () => {
+    const submitName = () => {
       if (!nameInput.value.trim()) { err.textContent = "اكتب اسمك أولًا"; return; }
-      if (codeInput.value.trim().toUpperCase() !== TRIP.code) { err.textContent = "رمز الرحلة غير صحيح"; return; }
       setParticipant(nameInput.value.trim());
       overlay.remove();
       box.remove();
       resolve();
-    }}, "دخول");
+    };
+    nameInput.addEventListener("keydown", (e) => { if (e.key === "Enter") submitName(); });
+    const go = el("button", { class: "btn btn-primary btn-block", style: "margin-top:14px", onclick: submitName }, "دخول");
     box.appendChild(el("div", { style: "font-size:20px;font-weight:700;text-align:center;margin-bottom:4px" }, "🇶🇦 رحلة قطر"));
-    box.appendChild(el("div", { style: "font-size:13px;color:var(--pewter);text-align:center;margin-bottom:18px" }, "أدخل اسمك ورمز الرحلة للمتابعة"));
+    box.appendChild(el("div", { style: "font-size:13px;color:var(--pewter);text-align:center;margin-bottom:18px" }, "اكتب اسمك للمتابعة"));
     box.appendChild(el("div", { class: "form-stack" }, [
       el("div", { class: "field" }, [el("label", {}, "الاسم"), nameInput]),
-      el("div", { class: "field" }, [el("label", {}, "رمز الرحلة"), codeInput]),
     ]));
     box.appendChild(err);
     box.appendChild(go);
