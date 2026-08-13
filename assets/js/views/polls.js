@@ -1,7 +1,7 @@
-import { POLLS, DECISION_NOTES } from "../data.js";
-import { el, ar } from "../util.js";
-import { pollResults, myVote, vote, resolvePoll } from "../store.js";
-import { isAdmin } from "../store.js";
+import { POLLS, DECISION_NOTES } from "../data.js?v=2";
+import { el, ar } from "../util.js?v=2";
+import { pollResults, myVote, vote, resolvePoll } from "../store.js?v=2";
+import { isAdmin } from "../store.js?v=2";
 
 export function renderPollCard(poll, { onChange } = {}) {
   const results = pollResults(poll.id, poll.options);
