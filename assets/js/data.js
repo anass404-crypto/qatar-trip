@@ -54,6 +54,8 @@ export const REAL_PHOTOS = {
   trapani: "assets/img/trapani.jpg",
   breakfast: "assets/img/breakfast.jpg",
   planetTeensMia: "assets/img/planet-teens-mia.jpg",
+  hotelTower: "assets/img/hotel-tower.jpg",
+  caboodle: "assets/img/caboodle.jpg",
 };
 
 // ---------- اليوم 0: الأحد 16 أغسطس — الوصول ومشيرب وكتارا والمدينة التعليمية ----------
@@ -89,7 +91,7 @@ const day0 = {
       desc: "15 دقيقة.", duration: "15 دقيقة",
       mapsUrl: "https://maps.google.com/?q=place_id:ChIJI8FOzL_ERT4RKGWFNo3xOhI",
       highlights: [] },
-    { id: "d0-8", time: "15:25", timeEnd: "16:10", title: "تسجيل الدخول", category: "hotel",
+    { id: "d0-8", time: "15:25", timeEnd: "16:10", title: "تسجيل الدخول", category: "hotel", cover: "hotelTower",
       desc: "غرف + حقائب + تغيير ملابس.", highlights: [] },
     { id: "d0-9", time: "16:30", timeEnd: "17:15", title: "Colorverse في كتارا", category: "light",
       desc: "تجربة ضوئية غامرة. حد أقصى 15 شخصًا.", capacity: "حد أقصى 15 شخصًا", cover: "colorverse",
@@ -180,7 +182,7 @@ const day2 = {
             highlights: ["المعدات متوفرة بالمكان", "89 ريال — سعر الثلاثاء"] },
         ]},
         { key: "toddlers", label: "الصغيران", icon: "🧸", items: [
-          { id: "d2-4-toddlers-1", time: "12:00", timeEnd: "14:00", title: "Caboodle", category: "play",
+          { id: "d2-4-toddlers-1", time: "12:00", timeEnd: "14:00", title: "Caboodle", category: "play", cover: "caboodle",
             desc: "تنبيه: تأكد من انتهاء التجديدات.", phone: "44887233",
             highlights: [] },
         ]},
@@ -216,9 +218,8 @@ const day3 = {
   note: "",
   items: [
     { id: "d3-1", time: "08:00", timeEnd: "09:00", title: "الإفطار", category: "food", cover: "breakfast", desc: "", highlights: [] },
-    { id: "d3-2", time: "09:00", timeEnd: "11:30", title: "فقرة مفتوحة — بانتظار القرار النهائي",
-      category: "beach",
-      desc: "من بين: Beach Club، Urban Arena، أو صباح حر.", highlights: [] },
+    { id: "d3-2", time: "09:15", timeEnd: "10:15", title: "سباحة الوداع في الطابق 52", category: "water", cover: "pool52",
+      desc: "جلسة أخيرة قبل تجهيز الحقائب.", highlights: [] },
     { id: "d3-3", time: "11:45", timeEnd: null, title: "تسجيل الخروج", category: "hotel",
       desc: "وقت Check-out الرسمي 12:00.", highlights: ["Check-out الرسمي: 12:00 ظهرًا"] },
     { id: "d3-4", time: "12:00", timeEnd: "13:00", title: "غداء قبل الطريق", category: "food", desc: "", highlights: [] },

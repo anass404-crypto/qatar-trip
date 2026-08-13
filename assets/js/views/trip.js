@@ -1,5 +1,5 @@
-import { TRIP } from "../data.js?v=3";
-import { el, ar } from "../util.js?v=3";
+import { TRIP, REAL_PHOTOS } from "../data.js?v=4";
+import { el, ar } from "../util.js?v=4";
 
 export function renderTrip(root) {
   const container = el("div", { class: "view-enter" });
@@ -16,13 +16,16 @@ export function renderTrip(root) {
 
   container.appendChild(el("section", { class: "section" }, [
     el("div", { class: "tag-title" }, "الفندق"),
-    el("div", { class: "plain-card" }, [
-      el("div", { style: "font-weight:700;font-size:15px;margin-bottom:8px" }, TRIP.hotel.name),
-      el("div", { class: "sheet-meta-grid" }, [
-        el("div", { class: "meta-box" }, [el("div", { class: "k" }, "Check-in"), el("div", { class: "v" }, TRIP.hotel.checkin)]),
-        el("div", { class: "meta-box" }, [el("div", { class: "k" }, "Check-out"), el("div", { class: "v" }, TRIP.hotel.checkout)]),
+    el("div", { class: "plain-card", style: "padding:0;overflow:hidden" }, [
+      el("img", { src: REAL_PHOTOS.hotelTower, alt: "", style: "width:100%;height:150px;object-fit:cover" }),
+      el("div", { style: "padding:14px" }, [
+        el("div", { style: "font-weight:700;font-size:15px;margin-bottom:8px" }, TRIP.hotel.name),
+        el("div", { class: "sheet-meta-grid" }, [
+          el("div", { class: "meta-box" }, [el("div", { class: "k" }, "Check-in"), el("div", { class: "v" }, TRIP.hotel.checkin)]),
+          el("div", { class: "meta-box" }, [el("div", { class: "k" }, "Check-out"), el("div", { class: "v" }, TRIP.hotel.checkout)]),
+        ]),
+        el("a", { class: "btn btn-primary btn-block", style: "margin-top:10px", href: TRIP.hotel.mapsUrl, target: "_blank", rel: "noopener" }, "📍 موقع الفندق"),
       ]),
-      el("a", { class: "btn btn-primary btn-block", style: "margin-top:10px", href: TRIP.hotel.mapsUrl, target: "_blank", rel: "noopener" }, "📍 موقع الفندق"),
     ]),
   ]));
 

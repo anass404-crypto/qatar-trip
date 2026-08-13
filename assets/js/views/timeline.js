@@ -1,6 +1,6 @@
-import { el, fmtRange } from "../util.js?v=3";
-import { getCover, buildDayBlocks, getBlockStatus, withOverrides } from "../schedule.js?v=3";
-import { openActivitySheet } from "./activitySheet.js?v=3";
+import { el, fmtRange } from "../util.js?v=4";
+import { getCover, buildDayBlocks, getBlockStatus, withOverrides } from "../schedule.js?v=4";
+import { openActivitySheet } from "./activitySheet.js?v=4";
 
 function miniCover(item) {
   const cover = getCover(item);
