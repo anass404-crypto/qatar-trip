@@ -1,12 +1,12 @@
-import { DAYS, TRIP, REAL_PHOTOS } from "../data.js?v=10";
-import { el, ar, formatCountdown } from "../util.js?v=10";
+import { DAYS, TRIP, REAL_PHOTOS } from "../data.js?v=11";
+import { el, ar, formatCountdown } from "../util.js?v=11";
 import {
   tripPhase, currentDayIndex, getCurrentAndNext, buildDayBlocks, getBlockStatus,
   highlightActivities, tomorrowTeaser, getCover,
-} from "../schedule.js?v=10";
-import { renderTimeline } from "./timeline.js?v=10";
-import { openActivitySheet } from "./activitySheet.js?v=10";
-import { isTeaserDismissed, dismissTeaser } from "../store.js?v=10";
+} from "../schedule.js?v=11";
+import { renderTimeline } from "./timeline.js?v=11";
+import { openActivitySheet } from "./activitySheet.js?v=11";
+import { isTeaserDismissed, dismissTeaser } from "../store.js?v=11";
 
 function heroSection(now) {
   const phase = tripPhase(now);

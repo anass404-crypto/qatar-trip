@@ -271,5 +271,4 @@ export const HIGHLIGHT_IDS = [
   "d0-5", "d0-6", "d0-9", "d0-10a", "d0-10d",
   "d1-5",
   "d2-2", "d2-4-over3-1", "d2-4-toddlers-1", "d2-6", "d2-7", "d2-9",
-  "d3-2",
 ];
