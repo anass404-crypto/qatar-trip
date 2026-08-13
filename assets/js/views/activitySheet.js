@@ -1,10 +1,10 @@
-import { el, fmtRange, ar } from "../util.js?v=11";
-import { getCover, withOverrides, getBlockStatus, buildDayBlocks } from "../schedule.js?v=11";
+import { el, fmtRange, ar } from "../util.js?v=12";
+import { getCover, withOverrides, getBlockStatus, buildDayBlocks } from "../schedule.js?v=12";
 import {
   toggleReaction, reactionCount, hasReacted,
   rateActivity, myRating, activityRatingAverage,
   addChangeRequest, getActivityStatus,
-} from "../store.js?v=11";
+} from "../store.js?v=12";
 
 let overlayEl, sheetEl;
 
