@@ -1,10 +1,10 @@
-import { el, fmtRange, ar } from "../util.js?v=17";
-import { getCover, withOverrides, getBlockStatus, buildDayBlocks } from "../schedule.js?v=17";
+import { el, fmtRange, ar } from "../util.js?v=18";
+import { getCover, withOverrides, getBlockStatus, buildDayBlocks } from "../schedule.js?v=18";
 import {
   toggleReaction, reactionCount, hasReacted,
   rateActivity, myRating, activityRatingAverage,
   addChangeRequest, getActivityStatus,
-} from "../store.js?v=17";
+} from "../store.js?v=18";
 
 let overlayEl, sheetEl;
 
@@ -67,6 +67,7 @@ export function openActivitySheet(id, day) {
   if (item.rating) metaItems.push(["تقييم المطعم", "⭐ " + ar(item.rating)]);
   if (item.capacity) metaItems.push(["السعة", item.capacity]);
   if (item.ageRange) metaItems.push(["الفئة العمرية", item.ageRange]);
+  if (item.hours) metaItems.push(["أوقات الدوام", item.hours]);
   if (item.phone) metaItems.push(["الهاتف", item.phone]);
   if (item.bookingRequired) metaItems.push(["الحجز", "إلزامي"]);
   if (item.bookingStatus) metaItems.push(["حالة الحجز", item.bookingStatus]);
@@ -80,6 +81,13 @@ export function openActivitySheet(id, day) {
 
   if (item.mapsUrl) {
     body.appendChild(el("a", { class: "btn btn-primary btn-block", href: item.mapsUrl, target: "_blank", rel: "noopener" }, "📍 افتح الموقع في خرائط قوقل"));
+  }
+
+  if (item.website || item.instagram) {
+    body.appendChild(el("div", { class: "choice-row" }, [
+      item.website ? el("a", { class: "btn btn-ghost btn-sm", href: item.website, target: "_blank", rel: "noopener" }, "🌐 الموقع الإلكتروني") : null,
+      item.instagram ? el("a", { class: "btn btn-ghost btn-sm", href: item.instagram, target: "_blank", rel: "noopener" }, "📷 إنستقرام") : null,
+    ]));
   }
 
   if (item.highlights && item.highlights.length) {
