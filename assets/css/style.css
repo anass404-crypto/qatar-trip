@@ -238,12 +238,13 @@ h1, h2, h3, h4 { color: var(--carbon); font-weight: 700; line-height: 1.3; }
 .sheet-overlay.open { opacity: 1; pointer-events: auto; }
 .sheet {
   position: fixed; inset-inline: 0; bottom: 0; z-index: 51; max-height: 92vh; background: var(--white);
-  border-radius: 20px 20px 0 0; overflow-y: auto; transform: translateY(100%); transition: transform 0.32s var(--t);
-  -webkit-overflow-scrolling: touch;
+  border-radius: 20px 20px 0 0; overflow: hidden; transform: translateY(100%); transition: transform 0.32s var(--t);
+  display: flex; flex-direction: column;
 }
 .sheet.open { transform: translateY(0); }
+.sheet-scroll { flex: 1; min-height: 0; overflow-y: auto; -webkit-overflow-scrolling: touch; }
 .sheet-grabber { width: 40px; height: 4px; background: var(--cloud); border-radius: 999px; margin: 10px auto; }
-.sheet-close { position: absolute; top: 14px; left: 14px; z-index: 3; width: 34px; height: 34px; border-radius: 50%; background: rgba(255,255,255,0.9); box-shadow: var(--shadow); display: flex; align-items: center; justify-content: center; }
+.sheet-close { position: fixed; top: 14px; left: 14px; z-index: 3; width: 34px; height: 34px; border-radius: 50%; background: rgba(255,255,255,0.9); box-shadow: var(--shadow); display: flex; align-items: center; justify-content: center; }
 .sheet-hero { position: relative; height: 220px; }
 .sheet-hero img { width: 100%; height: 100%; object-fit: cover; }
 .sheet-hero.ph { display: flex; align-items: center; justify-content: center; font-size: 56px; color: rgba(255,255,255,0.9); }

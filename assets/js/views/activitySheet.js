@@ -1,10 +1,10 @@
-import { el, fmtRange, ar } from "../util.js?v=16";
-import { getCover, withOverrides, getBlockStatus, buildDayBlocks } from "../schedule.js?v=16";
+import { el, fmtRange, ar } from "../util.js?v=17";
+import { getCover, withOverrides, getBlockStatus, buildDayBlocks } from "../schedule.js?v=17";
 import {
   toggleReaction, reactionCount, hasReacted,
   rateActivity, myRating, activityRatingAverage,
   addChangeRequest, getActivityStatus,
-} from "../store.js?v=16";
+} from "../store.js?v=17";
 
 let overlayEl, sheetEl;
 
@@ -45,8 +45,10 @@ export function openActivitySheet(id, day) {
 
   sheetEl.innerHTML = "";
   sheetEl.appendChild(el("button", { class: "sheet-close", "aria-label": "إغلاق", onclick: closeSheet }, "✕"));
-  sheetEl.appendChild(coverNode(item, true));
-  sheetEl.appendChild(el("div", { class: "sheet-grabber", style: "position:absolute;top:0" }));
+  const scroll = el("div", { class: "sheet-scroll" });
+  sheetEl.appendChild(scroll);
+  scroll.appendChild(el("div", { class: "sheet-grabber" }));
+  scroll.appendChild(coverNode(item, true));
 
   const body = el("div", { class: "sheet-body" });
 
@@ -141,7 +143,7 @@ export function openActivitySheet(id, day) {
   const editBtn = el("button", { class: "btn btn-ghost btn-block", onclick: () => openChangeRequestForm(item) }, "✏️ اقتراح تعديل");
   body.appendChild(editBtn);
 
-  sheetEl.appendChild(body);
+  scroll.appendChild(body);
   requestAnimationFrame(() => {
     overlayEl.classList.add("open");
     sheetEl.classList.add("open");
