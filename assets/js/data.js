@@ -119,11 +119,12 @@ const day0 = {
         ]},
       ],
     },
-    { id: "d0-11", time: "20:00", timeEnd: "21:30", title: "العشاء في قصر الياسمين", category: "food", cover: "qasrAlYasmin",
-      desc: "Festival City.", rating: 4.9, meetPoint: true,
+    { id: "d0-11", time: "20:30", timeEnd: "22:00", title: "العشاء في قصر الياسمين", category: "food", cover: "qasrAlYasmin",
+      desc: "Festival City. عدّلنا الموعد من 8:00 إلى 8:30 م — الإمام ينهي صلاة العشاء بمسجد ذو المنارتين حوالي 7:40-7:55، والطريق من المدينة التعليمية إلى Festival City حوالي 15-25 دقيقة بحسب الزحمة، فموعد 8:00 كان غير واقعي لمسار الكبار.",
+      rating: 4.9, meetPoint: true,
       mapsUrl: "https://maps.google.com/?q=place_id:ChIJ2fDvJfPdRT4RONtoiDP451E",
       highlights: ["التقاء الجميع", "Festival City", "تقييم 4.9"] },
-    { id: "d0-12", time: "21:45", timeEnd: null, title: "الفندق", category: "hotel", cover: "hotelTower", desc: "", highlights: [] },
+    { id: "d0-12", time: "22:15", timeEnd: null, title: "الفندق", category: "hotel", cover: "hotelTower", desc: "", highlights: [] },
   ],
 };
 

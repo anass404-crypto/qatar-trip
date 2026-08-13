@@ -1,14 +1,14 @@
-import { el } from "./util.js?v=8";
-import { getParticipant, setParticipant, getAnnouncements, subscribe } from "./store.js?v=8";
-import { tripPhase, currentDayIndex } from "./schedule.js?v=8";
-import { registerRoute, startRouter } from "./router.js?v=8";
-import { renderHome } from "./views/home.js?v=8";
-import { renderDay } from "./views/day.js?v=8";
-import { renderBookings } from "./views/bookings.js?v=8";
-import { renderTrip } from "./views/trip.js?v=8";
-import { renderMore } from "./views/more.js?v=8";
-import { renderSuggest } from "./views/suggest.js?v=8";
-import { renderAdmin } from "./views/admin.js?v=8";
+import { el } from "./util.js?v=9";
+import { getParticipant, setParticipant, getAnnouncements, subscribe } from "./store.js?v=9";
+import { tripPhase, currentDayIndex } from "./schedule.js?v=9";
+import { registerRoute, startRouter } from "./router.js?v=9";
+import { renderHome } from "./views/home.js?v=9";
+import { renderDay } from "./views/day.js?v=9";
+import { renderBookings } from "./views/bookings.js?v=9";
+import { renderTrip } from "./views/trip.js?v=9";
+import { renderMore } from "./views/more.js?v=9";
+import { renderSuggest } from "./views/suggest.js?v=9";
+import { renderAdmin } from "./views/admin.js?v=9";
 
 const app = document.getElementById("app");
 const topbar = document.getElementById("topbar");
