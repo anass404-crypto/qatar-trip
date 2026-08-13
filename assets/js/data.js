@@ -187,7 +187,7 @@ const day2 = {
       ],
     },
     { id: "d2-5", time: "14:15", timeEnd: "15:30", title: "العودة، قيلولة، سناك خفيف", category: "hotel", desc: "", highlights: [] },
-    { id: "d2-6", time: "15:45", timeEnd: "16:00", title: "التوجه إلى متحف الفن الإسلامي", category: "drive",
+    { id: "d2-6", time: "15:45", timeEnd: "16:00", title: "التوجه إلى متحف الفن الإسلامي", category: "museum",
       desc: "", mapsUrl: "https://maps.google.com/?q=place_id:ChIJjVLMehfFRT4RfdY6vbQQpXU", cover: "mia", highlights: [] },
     { id: "d2-7", time: "16:00", timeEnd: "17:00", title: "Planet Teens Workshop", category: "art", cover: "planetTeensMia",
       desc: "العمر 10–16، غير محجوزة حاليًا. وبالتوازي: جولة القاعات، عرض الإسطرلاب، تحدي الزخارف.",
@@ -272,6 +272,6 @@ export const DEFAULT_ANNOUNCEMENTS = [];
 export const HIGHLIGHT_IDS = [
   "d0-5", "d0-6", "d0-9", "d0-10-kids-1", "d0-10-adults-1",
   "d1-5",
-  "d2-2", "d2-4-over3-1", "d2-4-toddlers-1", "d2-7", "d2-9",
+  "d2-2", "d2-4-over3-1", "d2-4-toddlers-1", "d2-6", "d2-7", "d2-9",
   "d3-2",
 ];
