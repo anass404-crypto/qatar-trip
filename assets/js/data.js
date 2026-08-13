@@ -43,6 +43,17 @@ export const REAL_PHOTOS = {
   heroDoha: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Night_skylines_of_Doha_by_Ahmed_A._Ghaffar.jpg/1280px-Night_skylines_of_Doha_by_Ahmed_A._Ghaffar.jpg",
   katara: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Traditional_buildings_at_Katara_at_night.jpg/1280px-Traditional_buildings_at_Katara_at_night.jpg",
   mia: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Doha_Museum_of_Islamic_Arts_Exterior_51.jpg/1280px-Doha_Museum_of_Islamic_Arts_Exterior_51.jpg",
+  // صور حقيقية أرسلها المستخدم لكل فعالية — مرفوعة داخل المستودع نفسه
+  dohaQuest: "assets/img/doha-quest.jpg",
+  snowDunes: "assets/img/snow-dunes.jpg",
+  liveHub: "assets/img/live-hub.jpg",
+  pool52: "assets/img/pool-52.jpg",
+  rushPaintHouse: "assets/img/rush-paint-house.jpg",
+  colorverse: "assets/img/colorverse.jpg",
+  msheireb: "assets/img/msheireb.jpg",
+  trapani: "assets/img/trapani.jpg",
+  breakfast: "assets/img/breakfast.jpg",
+  planetTeensMia: "assets/img/planet-teens-mia.jpg",
 };
 
 // ---------- اليوم 0: الأحد 16 أغسطس — الوصول ومشيرب وكتارا والمدينة التعليمية ----------
@@ -60,18 +71,18 @@ const day0 = {
       desc: "مفتوح 24 ساعة. المدة المتوقعة 30–60 دقيقة.",
       mapsUrl: "https://maps.google.com/?q=place_id:ChIJVQo62gnwRj4ROzZwL7IEEg4",
       highlights: ["مفتوح على مدار الساعة", "المدة المتوقعة 30–60 دقيقة"] },
-    { id: "d0-3", time: "12:15", timeEnd: null, title: "الوصول إلى مشيرب", category: "culture",
+    { id: "d0-3", time: "12:15", timeEnd: null, title: "الوصول إلى مشيرب", category: "culture", cover: "msheireb",
       desc: "مواقف تحت الأرض مكيفة.",
       mapsUrl: "https://maps.google.com/?q=place_id:ChIJD59mvjnFRT4RivB5tQ0cb6Y",
       highlights: ["مواقف تحت الأرض مكيفة"] },
-    { id: "d0-4", time: "12:20", timeEnd: "13:20", title: "الغداء في Trapani", category: "food",
+    { id: "d0-4", time: "12:20", timeEnd: "13:20", title: "الغداء في Trapani", category: "food", cover: "trapani",
       desc: "مطعم إيطالي، سريع ومريح بعد الطريق.", rating: 4.4,
       mapsUrl: "https://maps.google.com/?q=place_id:ChIJnSntZzzFRT4RNs44RMpU8RQ",
       highlights: ["مطعم إيطالي", "تقييم 4.4", "سريع بعد رحلة الطريق"] },
-    { id: "d0-5", time: "13:25", timeEnd: "14:10", title: "Live Hub", category: "light",
+    { id: "d0-5", time: "13:25", timeEnd: "14:10", title: "Live Hub", category: "light", cover: "liveHub",
       desc: "معرض تفاعلي عن المستقبل. مجاني.", price: "مجاني",
       highlights: ["معرض تفاعلي عن المستقبل", "مجاني"] },
-    { id: "d0-6", time: "14:15", timeEnd: "15:00", title: "Rush Paint House", category: "art",
+    { id: "d0-6", time: "14:15", timeEnd: "15:00", title: "Rush Paint House", category: "art", cover: "rushPaintHouse",
       desc: "جلسة رش ألوان، 45 دقيقة. حجز مسبق.", duration: "45 دقيقة", bookingRequired: true,
       highlights: ["جلسة رش ألوان", "45 دقيقة", "يتطلب حجز مسبق"] },
     { id: "d0-7", time: "15:10", timeEnd: "15:25", title: "التوجه إلى الفندق", category: "drive",
@@ -81,7 +92,7 @@ const day0 = {
     { id: "d0-8", time: "15:25", timeEnd: "16:10", title: "تسجيل الدخول", category: "hotel",
       desc: "غرف + حقائب + تغيير ملابس.", highlights: [] },
     { id: "d0-9", time: "16:30", timeEnd: "17:15", title: "Colorverse في كتارا", category: "light",
-      desc: "تجربة ضوئية غامرة. حد أقصى 15 شخصًا.", capacity: "حد أقصى 15 شخصًا", cover: "katara",
+      desc: "تجربة ضوئية غامرة. حد أقصى 15 شخصًا.", capacity: "حد أقصى 15 شخصًا", cover: "colorverse",
       mapsUrl: "https://maps.google.com/?q=place_id:ChIJAfqz1UfDRT4RnSqB06dBnRE",
       highlights: ["تجربة ضوئية غامرة", "حد أقصى 15 شخصًا"] },
     { id: "d0-10", time: "17:20", type: "split", title: "انقسام المسارات",
@@ -120,7 +131,7 @@ const day1 = {
   tagline: "يوم Quest",
   note: "في ليلة هذا اليوم يجب حجز تذاكر قبة الثريا لأن التذاكر تفتح قبل العرض بيوم فقط.",
   items: [
-    { id: "d1-1", time: "08:30", timeEnd: "09:30", title: "فطور", category: "food", desc: "", highlights: [] },
+    { id: "d1-1", time: "08:30", timeEnd: "09:30", title: "فطور", category: "food", cover: "breakfast", desc: "", highlights: [] },
     { id: "d1-2", time: "09:30", timeEnd: null, title: "وقت حر وراحة واستعادة طاقة", category: "beach",
       desc: "مرشح اختياري: Doha Sands Beach Club (مجاني).", price: "مجاني (مرشّح اختياري)",
       highlights: ["وقت حر للراحة", "مرشح اختياري: Doha Sands Beach Club — مجاني"] },
@@ -129,7 +140,7 @@ const day1 = {
       desc: "بوابة 5. استبدال قسائم عطلة.",
       mapsUrl: "https://maps.google.com/?q=place_id:ChIJNbDkfqXFRT4RGelqgZu8fZ0",
       highlights: ["بوابة الدخول رقم 5", "استبدال قسائم عطلة عند الوصول"] },
-    { id: "d1-5", time: "14:00", timeEnd: "22:00", title: "Doha Quest", category: "ride",
+    { id: "d1-5", time: "14:00", timeEnd: "22:00", title: "Doha Quest", category: "ride", cover: "dohaQuest",
       desc: "اليوم الرئيسي في الرحلة.",
       bookingTotal: "1,556 ريال (5 بالغين + 3 أطفال)",
       innerPlan: [
@@ -154,8 +165,8 @@ const day2 = {
   tagline: "سباحة وثلج وفنون وفضاء",
   note: "التسجيل في عرض Polaris قبل العرض بنصف ساعة شرط.",
   items: [
-    { id: "d2-1", time: "08:00", timeEnd: "09:00", title: "الإفطار", category: "food", desc: "", highlights: [] },
-    { id: "d2-2", time: "09:15", timeEnd: "10:30", title: "سباحة في مسبح الطابق 52", category: "water",
+    { id: "d2-1", time: "08:00", timeEnd: "09:00", title: "الإفطار", category: "food", cover: "breakfast", desc: "", highlights: [] },
+    { id: "d2-2", time: "09:15", timeEnd: "10:30", title: "سباحة في مسبح الطابق 52", category: "water", cover: "pool52",
       desc: "أعلى مسبح داخلي في قطر حسب معلومات الرحلة.",
       highlights: ["أعلى مسبح داخلي في قطر حسب معلومات الرحلة"] },
     { id: "d2-3", time: "11:30", timeEnd: null, title: "التوجه إلى Festival City", category: "drive",
@@ -163,7 +174,7 @@ const day2 = {
     { id: "d2-4", time: "12:00", timeEnd: "14:00", type: "split", title: "انقسام المسارات",
       paths: [
         { key: "over3", label: "فوق 3 سنوات", icon: "🧒", items: [
-          { id: "d2-4-over3-1", time: "12:00", timeEnd: "14:00", title: "Snow Dunes", category: "snow",
+          { id: "d2-4-over3-1", time: "12:00", timeEnd: "14:00", title: "Snow Dunes", category: "snow", cover: "snowDunes",
             desc: "يفتح الساعة 12:00. المعدات متوفرة.", price: "89 ريال (سعر الثلاثاء المذكور في الخطة)",
             mapsUrl: "https://maps.google.com/?q=place_id:ChIJp6v9JRDdRT4RxHsq43W53po",
             highlights: ["المعدات متوفرة بالمكان", "89 ريال — سعر الثلاثاء"] },
@@ -178,7 +189,7 @@ const day2 = {
     { id: "d2-5", time: "14:15", timeEnd: "15:30", title: "العودة، قيلولة، سناك خفيف", category: "hotel", desc: "", highlights: [] },
     { id: "d2-6", time: "15:45", timeEnd: "16:00", title: "التوجه إلى متحف الفن الإسلامي", category: "drive",
       desc: "", mapsUrl: "https://maps.google.com/?q=place_id:ChIJjVLMehfFRT4RfdY6vbQQpXU", cover: "mia", highlights: [] },
-    { id: "d2-7", time: "16:00", timeEnd: "17:00", title: "Planet Teens Workshop", category: "art", cover: "mia",
+    { id: "d2-7", time: "16:00", timeEnd: "17:00", title: "Planet Teens Workshop", category: "art", cover: "planetTeensMia",
       desc: "العمر 10–16، غير محجوزة حاليًا. وبالتوازي: جولة القاعات، عرض الإسطرلاب، تحدي الزخارف.",
       ageRange: "10–16", bookingStatus: "غير محجوزة حاليًا",
       highlights: ["ورشة للأعمار 10–16", "بالتوازي: جولة القاعات وعرض الإسطرلاب وتحدي الزخارف"] },
@@ -204,10 +215,10 @@ const day3 = {
   tagline: "صباح أخير والعودة",
   note: "",
   items: [
-    { id: "d3-1", time: "08:00", timeEnd: "09:00", title: "الإفطار", category: "food", desc: "", highlights: [] },
-    { id: "d3-2", time: "09:00", timeEnd: "11:30", type: "poll-slot", title: "فقرة مفتوحة — لم تُحسم بعد",
-      pollId: "poll-wed-morning", category: "beach",
-      desc: "بانتظار تصويت العائلة: Beach Club، Urban Arena، أو صباح حر.", highlights: [] },
+    { id: "d3-1", time: "08:00", timeEnd: "09:00", title: "الإفطار", category: "food", cover: "breakfast", desc: "", highlights: [] },
+    { id: "d3-2", time: "09:00", timeEnd: "11:30", title: "فقرة مفتوحة — بانتظار القرار النهائي",
+      category: "beach",
+      desc: "من بين: Beach Club، Urban Arena، أو صباح حر.", highlights: [] },
     { id: "d3-3", time: "11:45", timeEnd: null, title: "تسجيل الخروج", category: "hotel",
       desc: "وقت Check-out الرسمي 12:00.", highlights: ["Check-out الرسمي: 12:00 ظهرًا"] },
     { id: "d3-4", time: "12:00", timeEnd: "13:00", title: "غداء قبل الطريق", category: "food", desc: "", highlights: [] },
@@ -244,34 +255,6 @@ export const BOOKINGS = {
     { id: "b15", title: "Snow Dunes — Counter" },
   ],
 };
-
-// ---------- قرارات معلقة / تصويت ----------
-export const POLLS = [
-  {
-    id: "poll-wed-morning",
-    question: "صباح الأربعاء — ماذا تفضل؟",
-    options: [
-      { id: "beach", label: "Beach Club", icon: "🏖️" },
-      { id: "urban", label: "Urban Arena", icon: "⚽" },
-      { id: "free", label: "صباح حر", icon: "☕" },
-    ],
-    resolved: false,
-  },
-  {
-    id: "poll-indian-lunch",
-    question: "الغداء الهندي — هل يستبدل الغداء في Trapani يوم الأحد؟",
-    options: [
-      { id: "yes", label: "نعم، نستبدله", icon: "✅" },
-      { id: "no", label: "لا، نبقي Trapani", icon: "❌" },
-    ],
-    resolved: false,
-  },
-];
-
-// ملاحظة قرار إضافية (ليست تصويتًا بخيارات محددة)
-export const DECISION_NOTES = [
-  { id: "dec-entertainer", title: "Entertainer", note: "بحد أقصى اشتراكان" },
-];
 
 // فعاليات مستبعدة نهائيًا — لا تُعرض كاقتراحات تلقائية إلا إن أضافها المشرف يدويًا
 export const EXCLUDED_SUGGESTIONS = [

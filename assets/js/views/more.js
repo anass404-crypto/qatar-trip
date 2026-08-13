@@ -26,7 +26,6 @@ export function renderMore(root) {
 
   container.appendChild(el("section", { class: "card-list section", style: "padding-top:0" }, [
     menuRow("#/trip", "🧭", "الرحلة"),
-    menuRow("#/polls", "👀", "القرارات المعلقة"),
     menuRow("#/suggest", "💡", "عندك اقتراح؟"),
     isAdmin()
       ? el("button", { class: "plain-card", style: "display:flex;align-items:center;gap:12px;width:100%", onclick: () => { adminLogout(); location.hash = "#/more"; } }, [

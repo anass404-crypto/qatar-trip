@@ -1,6 +1,6 @@
 // طبقة تخزين محلية (localStorage) خلف واجهة صغيرة قابلة للاستبدال لاحقًا بخادم مشترك
 // (Supabase أو غيره) دون تعديل الواجهات — كل الوصول للبيانات يمر من هنا فقط.
-// ملاحظة صادقة: بما أن الموقع ثابت بلا خادم، هذه التفاعلات (الحماس/التقييم/التصويت/تعديلات
+// ملاحظة صادقة: بما أن الموقع ثابت بلا خادم، هذه التفاعلات (الحماس/التقييم/تعديلات
 // المشرف) محفوظة على هذا الجهاز فقط حاليًا، وليست مشتركة فوريًا بين جميع أفراد العائلة.
 
 const KEY = "qtrip:v1";
@@ -27,8 +27,6 @@ let state = Object.assign(
     ratings: {},           // { activityId: { [name]: { stars, comment } } }
     suggestions: [],       // [{id,type,title,details,link,image,status,author,createdAt}]
     changeRequests: [],    // [{id,activityId,activityTitle,type,note,status,author,createdAt}]
-    votes: {},              // { pollId: { [name]: optionId } }
-    pollResolutions: {},   // { pollId: optionId }
     overrides: {           // تعديلات المشرف فوق البيانات الأصلية
       activities: {},       // { id: {partial fields...} }
       announcements: [],
@@ -151,29 +149,6 @@ export function addChangeRequest({ activityId, activityTitle, type, note }) {
 }
 export function setChangeRequestStatus(id, status) {
   patch({ changeRequests: state.changeRequests.map((c) => (c.id === id ? { ...c, status } : c)) });
-}
-
-// ---------- التصويت ----------
-export function vote(pollId, optionId) {
-  const name = state.participant?.name || "زائر";
-  const cur = { ...(state.votes[pollId] || {}) };
-  cur[name] = optionId;
-  patch({ votes: { ...state.votes, [pollId]: cur } });
-}
-export function myVote(pollId) {
-  const name = state.participant?.name || "زائر";
-  return (state.votes[pollId] || {})[name] || null;
-}
-export function pollResults(pollId, options) {
-  const votes = Object.values(state.votes[pollId] || {});
-  const total = votes.length;
-  return options.map((o) => {
-    const count = votes.filter((v) => v === o.id).length;
-    return { ...o, count, pct: total ? Math.round((count / total) * 100) : 0 };
-  });
-}
-export function resolvePoll(pollId, optionId) {
-  patch({ pollResolutions: { ...state.pollResolutions, [pollId]: optionId } });
 }
 
 // ---------- تعديلات المشرف ----------

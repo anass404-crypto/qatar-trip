@@ -8,7 +8,6 @@ import { renderBookings } from "./views/bookings.js?v=2";
 import { renderTrip } from "./views/trip.js?v=2";
 import { renderMore } from "./views/more.js?v=2";
 import { renderSuggest } from "./views/suggest.js?v=2";
-import { renderPolls } from "./views/polls.js?v=2";
 import { renderAdmin } from "./views/admin.js?v=2";
 
 const app = document.getElementById("app");
@@ -68,7 +67,7 @@ const NAV_ITEMS = [
   { href: "#/", icon: "🏠", label: "الرئيسية", match: (p) => p === "/" || p === "" },
   { href: "#/day/0", icon: "🗓️", label: "الجدول", match: (p) => p.startsWith("/day") },
   { href: "#/bookings", icon: "🎟", label: "الحجوزات", match: (p) => p.startsWith("/bookings") },
-  { href: "#/more", icon: "•••", label: "المزيد", match: (p) => ["/more", "/trip", "/suggest", "/polls", "/admin"].some((x) => p.startsWith(x)) },
+  { href: "#/more", icon: "•••", label: "المزيد", match: (p) => ["/more", "/trip", "/suggest", "/admin"].some((x) => p.startsWith(x)) },
 ];
 
 function renderBottomNav(path) {
@@ -105,7 +104,6 @@ registerRoute("/bookings", () => renderBookings(app));
 registerRoute("/trip", () => renderTrip(app));
 registerRoute("/more", () => renderMore(app));
 registerRoute("/suggest", () => renderSuggest(app));
-registerRoute("/polls", () => renderPolls(app));
 registerRoute("/admin", () => renderAdmin(app));
 
 async function boot() {

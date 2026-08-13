@@ -161,9 +161,6 @@ function adminHome(root) {
   container.appendChild(section("حالة الحجوزات", bookingsBlock(rerender)));
   container.appendChild(section("الاقتراحات الواردة", suggestionsBlock(rerender)));
   container.appendChild(section("طلبات تعديل الفعاليات", changeRequestsBlock(rerender)));
-  container.appendChild(el("section", { class: "section" }, [
-    el("a", { class: "btn btn-ghost btn-block", href: "#/polls" }, "إدارة التصويتات ←"),
-  ]));
   container.appendChild(el("div", { style: "height:24px" }));
 
   root.innerHTML = "";

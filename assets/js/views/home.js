@@ -2,13 +2,11 @@ import { DAYS, TRIP, REAL_PHOTOS } from "../data.js?v=2";
 import { el, ar, formatCountdown } from "../util.js?v=2";
 import {
   tripPhase, currentDayIndex, getCurrentAndNext, buildDayBlocks, getBlockStatus,
-  highlightActivities, tomorrowTeaser, getCover, allTripBlocks,
+  highlightActivities, tomorrowTeaser, getCover,
 } from "../schedule.js?v=2";
 import { renderTimeline } from "./timeline.js?v=2";
 import { openActivitySheet } from "./activitySheet.js?v=2";
 import { isTeaserDismissed, dismissTeaser } from "../store.js?v=2";
-import { POLLS } from "../data.js?v=2";
-import { renderPollCard } from "./polls.js?v=2";
 
 function heroSection(now) {
   const phase = tripPhase(now);
@@ -127,17 +125,6 @@ function highlightsSection() {
   ]);
 }
 
-function decisionsSection(root) {
-  const open = POLLS.filter((p) => !p.resolved);
-  if (!open.length) return null;
-  const wrap = el("div", { class: "card-list" });
-  open.forEach((poll) => wrap.appendChild(renderPollCard(poll, { onChange: () => renderHome(root) })));
-  return el("section", { class: "section" }, [
-    el("div", { class: "section-head" }, [el("h2", { class: "section-title" }, "نحتاج قراركم 👀"), el("a", { class: "link-more", href: "#/polls" }, "الكل")]),
-    wrap,
-  ]);
-}
-
 export function renderHome(root) {
   const now = new Date();
   const phase = tripPhase(now);
@@ -167,9 +154,6 @@ export function renderHome(root) {
     const hl = highlightsSection();
     if (hl) container.appendChild(hl);
   }
-
-  const dq = decisionsSection(root);
-  if (dq) container.appendChild(dq);
 
   container.appendChild(el("section", { class: "section" }, [
     el("div", { class: "section-head" }, [el("h2", { class: "section-title" }, "أيام الرحلة"), null]),
