@@ -1,5 +1,5 @@
-import { TRIP, REAL_PHOTOS } from "../data.js?v=18";
-import { el, ar } from "../util.js?v=18";
+import { TRIP, REAL_PHOTOS } from "../data.js?v=19";
+import { el, ar } from "../util.js?v=19";
 
 export function renderTrip(root) {
   const container = el("div", { class: "view-enter" });
@@ -25,6 +25,10 @@ export function renderTrip(root) {
           el("div", { class: "meta-box" }, [el("div", { class: "k" }, "Check-out"), el("div", { class: "v" }, TRIP.hotel.checkout)]),
         ]),
         el("a", { class: "btn btn-primary btn-block", style: "margin-top:10px", href: TRIP.hotel.mapsUrl, target: "_blank", rel: "noopener" }, "📍 موقع الفندق"),
+        el("div", { class: "choice-row", style: "margin-top:8px" }, [
+          TRIP.hotel.website ? el("a", { class: "btn btn-ghost btn-sm", href: TRIP.hotel.website, target: "_blank", rel: "noopener" }, "🌐 الموقع الإلكتروني") : null,
+          TRIP.hotel.instagram ? el("a", { class: "btn btn-ghost btn-sm", href: TRIP.hotel.instagram, target: "_blank", rel: "noopener" }, "📷 إنستقرام") : null,
+        ]),
       ]),
     ]),
   ]));
