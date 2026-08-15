@@ -54,7 +54,7 @@ export const REAL_PHOTOS = {
   pool52: "assets/img/pool-52.jpg",
   rushPaintHouse: "assets/img/rush-paint-house.jpg",
   colorverse: "assets/img/colorverse.jpg",
-  msheireb: "assets/img/msheireb.jpg?v=22",
+  msheireb: "assets/img/msheireb.jpg?v=23",
   trapani: "assets/img/trapani.jpg",
   breakfast: "assets/img/breakfast.jpg",
   planetTeensMia: "assets/img/planet-teens-mia.jpg",
@@ -65,7 +65,7 @@ export const REAL_PHOTOS = {
   quranicGarden: "assets/img/quranic-garden.jpg",
   festivalCity: "assets/img/doha-festival-city.jpg",
   crystalWalkway: "assets/img/crystal-walkway.jpg",
-  brd: "assets/img/brd-restaurant.jpg",
+  brd: "assets/img/brd-restaurant.jpg?v=23",
 };
 
 // ---------- اليوم 0: الأحد 16 أغسطس — الوصول ومشيرب وكتارا والمدينة التعليمية ----------
