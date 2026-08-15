@@ -44,6 +44,7 @@ export const CATEGORY_STYLE = {
 // صور حقيقية موثّقة (Wikimedia Commons) لأماكن تحققنا منها سابقًا فقط — البقية Placeholder حتى تُستبدل من لوحة الإدارة
 export const REAL_PHOTOS = {
   katara: "assets/img/katara-dome.jpg",
+  abuSamra: "assets/img/abu-samra-border.jpg",
   alThurayaInterior: "assets/img/al-thuraya-interior.jpg",
   // صور حقيقية أرسلها المستخدم لكل فعالية — مرفوعة داخل المستودع نفسه
   mia: "assets/img/mia-exterior.jpg",
@@ -55,7 +56,7 @@ export const REAL_PHOTOS = {
   pool52: "assets/img/pool-52.jpg",
   rushPaintHouse: "assets/img/rush-paint-house.jpg",
   colorverse: "assets/img/colorverse.jpg",
-  msheireb: "assets/img/msheireb.jpg?v=25",
+  msheireb: "assets/img/msheireb.jpg?v=26",
   trapani: "assets/img/trapani.jpg",
   breakfast: "assets/img/breakfast.jpg",
   planetTeensMia: "assets/img/planet-teens-mia.jpg",
@@ -66,7 +67,7 @@ export const REAL_PHOTOS = {
   quranicGarden: "assets/img/quranic-garden.jpg",
   festivalCity: "assets/img/doha-festival-city.jpg",
   crystalWalkway: "assets/img/crystal-walkway.jpg",
-  brd: "assets/img/brd-restaurant.jpg?v=25",
+  brd: "assets/img/brd-restaurant.jpg?v=26",
 };
 
 // ---------- اليوم 0: الأحد 16 أغسطس — الوصول ومشيرب وكتارا والمدينة التعليمية ----------
@@ -80,7 +81,7 @@ const day0 = {
   items: [
     { id: "d0-1", time: "08:00", timeEnd: null, title: "الانطلاق من الدمام", category: "drive",
       desc: "الإفطار في الطريق.", highlights: [] },
-    { id: "d0-2", time: "11:00", approx: true, timeEnd: null, title: "منفذ أبو سمرة", category: "border",
+    { id: "d0-2", time: "11:00", approx: true, timeEnd: null, title: "منفذ أبو سمرة", category: "border", cover: "abuSamra",
       desc: "مفتوح 24 ساعة. المدة المتوقعة 30–60 دقيقة.",
       mapsUrl: "https://www.google.com/maps/search/?api=1&query=Abu+Samra+Border+Crossing&query_place_id=ChIJVQo62gnwRj4ROzZwL7IEEg4",
       highlights: ["مفتوح على مدار الساعة", "المدة المتوقعة 30–60 دقيقة"] },
