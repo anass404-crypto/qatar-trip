@@ -1,6 +1,6 @@
-import { el, fmtRange } from "../util.js?v=21";
-import { getCover, buildDayBlocks, getBlockStatus, withOverrides } from "../schedule.js?v=21";
-import { openActivitySheet } from "./activitySheet.js?v=21";
+import { el, fmtRange } from "../util.js?v=22";
+import { getCover, buildDayBlocks, getBlockStatus, withOverrides } from "../schedule.js?v=22";
+import { openActivitySheet } from "./activitySheet.js?v=22";
 
 function miniCover(item) {
   const cover = getCover(item);
@@ -27,22 +27,30 @@ function activityRow(day, item, status) {
   return row;
 }
 
+function splitCard(day, path, sub) {
+  const cover = getCover(sub);
+  const inner = cover.type === "image"
+    ? el("img", { src: cover.url, alt: "" })
+    : el("div", { class: "ph", style: `background:${cover.grad}` }, cover.icon);
+  return el("div", { class: "split-card", onclick: () => openActivitySheet(sub.id, day) }, [
+    inner, el("div", { class: "scrim" }),
+    el("div", { class: "split-badge" }, [el("span", {}, path.icon), path.label]),
+    el("div", { class: "split-card-info" }, [
+      el("div", { class: "name" }, sub.title),
+      el("div", { class: "when" }, fmtRange(sub.time, sub.timeEnd)),
+    ]),
+  ]);
+}
+
 function splitRow(day, block, status) {
   const item = block;
   return el("div", { class: `tl-item ${status}` }, [
     el("div", { class: "tl-rail" }, el("div", { class: "tl-dot" })),
     el("div", { class: "tl-content", style: "flex:1" }, [
       el("div", { class: "tl-time" }, item.time ? fmtRange(item.time) : ""),
-      el("div", { class: "tl-split" }, [
-        el("div", { class: "tl-split-label" }, "🔀 " + item.title),
-        el("div", { class: "tl-split-cols" }, item.paths.map((p) =>
-          el("div", { class: "tl-path" }, [
-            el("div", { class: "tl-path-head" }, [p.icon, " ", p.label]),
-            ...p.items.map((sub) => el("div", { class: "tl-path-item", onclick: () => openActivitySheet(sub.id, day) }, [
-              el("span", { class: "t" }, fmtRange(sub.time, sub.timeEnd)), " — ", sub.title,
-            ])),
-          ])
-        )),
+      el("div", { class: "split-block" }, [
+        el("div", { class: "split-heading" }, "🔀 " + item.title),
+        el("div", { class: "split-grid" }, item.paths.flatMap((p) => p.items.map((sub) => splitCard(day, p, sub)))),
       ]),
     ]),
   ]);
