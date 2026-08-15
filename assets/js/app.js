@@ -1,14 +1,15 @@
-import { el } from "./util.js?v=26";
-import { getParticipant, setParticipant, getAnnouncements, subscribe } from "./store.js?v=26";
-import { tripPhase, currentDayIndex } from "./schedule.js?v=26";
-import { registerRoute, startRouter } from "./router.js?v=26";
-import { renderHome } from "./views/home.js?v=26";
-import { renderDay } from "./views/day.js?v=26";
-import { renderBookings } from "./views/bookings.js?v=26";
-import { renderTrip } from "./views/trip.js?v=26";
-import { renderMore } from "./views/more.js?v=26";
-import { renderSuggest } from "./views/suggest.js?v=26";
-import { renderAdmin } from "./views/admin.js?v=26";
+import { el } from "./util.js?v=27";
+import { getParticipant, setParticipant, getAnnouncements, subscribe } from "./store.js?v=27";
+import { tripPhase, currentDayIndex } from "./schedule.js?v=27";
+import { registerRoute, startRouter } from "./router.js?v=27";
+import { renderHome } from "./views/home.js?v=27";
+import { renderDay } from "./views/day.js?v=27";
+import { renderBookings } from "./views/bookings.js?v=27";
+import { renderTrip } from "./views/trip.js?v=27";
+import { renderDining } from "./views/dining.js?v=27";
+import { renderMore } from "./views/more.js?v=27";
+import { renderSuggest } from "./views/suggest.js?v=27";
+import { renderAdmin } from "./views/admin.js?v=27";
 
 const app = document.getElementById("app");
 const topbar = document.getElementById("topbar");
@@ -67,7 +68,7 @@ const NAV_ITEMS = [
   { href: "#/", icon: "🏠", label: "الرئيسية", match: (p) => p === "/" || p === "" },
   { href: "#/day/0", icon: "🗓️", label: "الجدول", match: (p) => p.startsWith("/day") },
   { href: "#/bookings", icon: "🎟", label: "الحجوزات", match: (p) => p.startsWith("/bookings") },
-  { href: "#/more", icon: "•••", label: "المزيد", match: (p) => ["/more", "/trip", "/suggest", "/admin"].some((x) => p.startsWith(x)) },
+  { href: "#/more", icon: "•••", label: "المزيد", match: (p) => ["/more", "/trip", "/dining", "/suggest", "/admin"].some((x) => p.startsWith(x)) },
 ];
 
 function renderBottomNav(path) {
@@ -102,6 +103,7 @@ registerRoute("/", () => renderHome(app));
 registerRoute("/day/:i", ({ i }) => renderDay(app, i));
 registerRoute("/bookings", () => renderBookings(app));
 registerRoute("/trip", () => renderTrip(app));
+registerRoute("/dining", () => renderDining(app));
 registerRoute("/more", () => renderMore(app));
 registerRoute("/suggest", () => renderSuggest(app));
 registerRoute("/admin", () => renderAdmin(app));

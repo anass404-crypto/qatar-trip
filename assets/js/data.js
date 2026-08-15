@@ -56,7 +56,7 @@ export const REAL_PHOTOS = {
   pool52: "assets/img/pool-52.jpg",
   rushPaintHouse: "assets/img/rush-paint-house.jpg",
   colorverse: "assets/img/colorverse.jpg",
-  msheireb: "assets/img/msheireb.jpg?v=26",
+  msheireb: "assets/img/msheireb.jpg?v=27",
   trapani: "assets/img/trapani.jpg",
   breakfast: "assets/img/breakfast.jpg",
   planetTeensMia: "assets/img/planet-teens-mia.jpg",
@@ -67,7 +67,7 @@ export const REAL_PHOTOS = {
   quranicGarden: "assets/img/quranic-garden.jpg",
   festivalCity: "assets/img/doha-festival-city.jpg",
   crystalWalkway: "assets/img/crystal-walkway.jpg",
-  brd: "assets/img/brd-restaurant.jpg?v=26",
+  brd: "assets/img/brd-restaurant.jpg?v=27",
 };
 
 // ---------- اليوم 0: الأحد 16 أغسطس — الوصول ومشيرب وكتارا والمدينة التعليمية ----------
@@ -307,6 +307,37 @@ const day3 = {
 };
 
 export const DAYS = [day0, day1, day2, day3];
+
+// ---------- دليل المطاعم والمقاهي (مرجع مستقل عن الجدول) ----------
+// scheduleStatus: "current" = ضمن الجدول حاليًا، "removed" = كان مقترحًا وحُذف، بدون قيمة = اقتراح إضافي
+export const DINING = [
+  { id: "dine-trapani", name: "Trapani", area: "مشيرب", type: "restaurant", cuisine: "إيطالي (Cicchetteria)",
+    rating: 4.4, hours: NEEDS_CONFIRM,
+    instagram: "https://www.instagram.com/trapani.qtr/",
+    mapsUrl: "https://www.google.com/maps/search/?api=1&query=Trapani+Restaurant+Doha&query_place_id=ChIJnSntZzzFRT4RNs44RMpU8RQ",
+    cover: "trapani",
+    desc: "مطعم إيطالي على طراز Cicchetteria (أطباق صغيرة) — بيتزا وريزوتو وأرانشيني.",
+    scheduleStatus: "current", scheduleNote: "غداء الأحد" },
+  { id: "dine-yasmine", name: "قصر الياسمين (Yasmine Palace)", area: "Doha Festival City", type: "restaurant", cuisine: "شرقي وأندلسي",
+    rating: 4.9, hours: NEEDS_CONFIRM,
+    website: "https://yasminepalace.com/doha-festival-city-branch/", instagram: "https://www.instagram.com/yasminepalace/",
+    mapsUrl: "https://www.google.com/maps/search/?api=1&query=Qasr+Al+Yasmin+Restaurant+Doha&query_place_id=ChIJ2fDvJfPdRT4RONtoiDP451E",
+    cover: "qasrAlYasmin",
+    desc: "عمارة أندلسية فخمة بنافورة مركزية — فاز بجائزة TripAdvisor Travelers' Choice.",
+    scheduleStatus: "current", scheduleNote: "عشاء الأحد" },
+  { id: "dine-brd", name: "BRD", area: "ممشى الكريستال، جزيرة جوان", type: "restaurant", cuisine: "دجاج روتيسري وبرجر",
+    hours: NEEDS_CONFIRM, phone: "55997720",
+    instagram: "https://www.instagram.com/brd.qa/",
+    mapsUrl: "https://www.google.com/maps/search/?api=1&query=BRD+Crystal+Walkway+Gewan+Island+Doha",
+    cover: "brd",
+    desc: "أول مفهوم دجاج روتيسري في قطر — دجاج مشوي وبرجر لحم وترافل وأجنحة بلمسة كورية.",
+    scheduleStatus: "current", scheduleNote: "عشاء الثلاثاء" },
+  { id: "dine-parisa", name: "Parisa", area: "سوق واقف", type: "restaurant", cuisine: "إيراني",
+    rating: 4.3, hours: "6:00–10:30م", phone: "44411494",
+    mapsUrl: "https://www.google.com/maps/search/?api=1&query=Parisa+Restaurant+Doha&query_place_id=ChIJCz-fZz7FRT4RZGAhbElAQdY",
+    desc: "أضخم مطعم إيراني في الدوحة — ديكور مبهر بمرايا فسيفسائية وزخارف يدوية. كان مخططًا لعشاء الثلاثاء، استُبدل بـ BRD. الحجز إلزامي فعلًا وقد يحتاج يومين مسبقًا.",
+    scheduleStatus: "removed" },
+];
 
 // ---------- الحجوزات ----------
 export const BOOKINGS = {

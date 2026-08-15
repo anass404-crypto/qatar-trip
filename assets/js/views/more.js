@@ -1,5 +1,5 @@
-import { el } from "../util.js?v=26";
-import { getParticipant, clearParticipant, isAdmin, adminLogout, resetAllData } from "../store.js?v=26";
+import { el } from "../util.js?v=27";
+import { getParticipant, clearParticipant, isAdmin, adminLogout, resetAllData } from "../store.js?v=27";
 
 function menuRow(href, icon, label) {
   return el("a", { href, class: "plain-card", style: "display:flex;align-items:center;gap:12px" }, [
@@ -26,6 +26,7 @@ export function renderMore(root) {
 
   container.appendChild(el("section", { class: "card-list section", style: "padding-top:0" }, [
     menuRow("#/trip", "🧭", "الرحلة"),
+    menuRow("#/dining", "🍽️", "مطاعم ومقاهي"),
     menuRow("#/suggest", "💡", "عندك اقتراح؟"),
     isAdmin()
       ? el("button", { class: "plain-card", style: "display:flex;align-items:center;gap:12px;width:100%", onclick: () => { adminLogout(); location.hash = "#/more"; } }, [
