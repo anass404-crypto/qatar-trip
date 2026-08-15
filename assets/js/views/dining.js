@@ -1,5 +1,5 @@
-import { DINING, CATEGORY_STYLE, REAL_PHOTOS } from "../data.js?v=28";
-import { el, ar } from "../util.js?v=28";
+import { DINING, CATEGORY_STYLE, REAL_PHOTOS } from "../data.js?v=29";
+import { el, ar } from "../util.js?v=29";
 
 const TYPE_LABEL = { restaurant: "مطعم", cafe: "مقهى", dessert: "حلا وآيس كريم" };
 const TYPE_ICON = { restaurant: "🍽️", cafe: "☕", dessert: "🍨" };

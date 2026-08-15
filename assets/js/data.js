@@ -56,7 +56,7 @@ export const REAL_PHOTOS = {
   pool52: "assets/img/pool-52.jpg",
   rushPaintHouse: "assets/img/rush-paint-house.jpg",
   colorverse: "assets/img/colorverse.jpg",
-  msheireb: "assets/img/msheireb.jpg?v=28",
+  msheireb: "assets/img/msheireb.jpg?v=29",
   trapani: "assets/img/trapani.jpg",
   breakfast: "assets/img/breakfast.jpg",
   planetTeensMia: "assets/img/planet-teens-mia.jpg",
@@ -67,7 +67,7 @@ export const REAL_PHOTOS = {
   quranicGarden: "assets/img/quranic-garden.jpg",
   festivalCity: "assets/img/doha-festival-city.jpg",
   crystalWalkway: "assets/img/crystal-walkway.jpg",
-  brd: "assets/img/brd-restaurant.jpg?v=28",
+  brd: "assets/img/brd-restaurant.jpg?v=29",
 };
 
 // ---------- اليوم 0: الأحد 16 أغسطس — الوصول ومشيرب وكتارا والمدينة التعليمية ----------
@@ -279,14 +279,14 @@ const day2 = {
   ],
 };
 
-// ---------- اليوم 3: الأربعاء 19 أغسطس — العودة ----------
+// ---------- اليوم 3: الأربعاء 19 أغسطس — صباح أخير، Vendôme، قناة كارتييه، سوق واقف، والعودة ليلًا ----------
 const day3 = {
   id: "d3",
   date: "2026-08-19",
   label: "الأربعاء",
   dateLabel: "19 أغسطس",
-  tagline: "صباح أخير والعودة",
-  note: "",
+  tagline: "صباح أخير، مول جديد، وسهرة قبل الطريق",
+  note: "بعد تسجيل الخروج نواصل اليوم بفعاليات جديدة وننطلق إلى الدمام مساءً بدل الظهر.",
   items: [
     { id: "d3-1", time: "08:00", timeEnd: "09:00", title: "الإفطار", category: "food", cover: "breakfast", desc: "", highlights: [] },
     { id: "d3-2", time: "09:15", timeEnd: "10:15", title: "سباحة الوداع في الطابق 52", category: "water", cover: "pool52",
@@ -300,9 +300,31 @@ const day3 = {
       mapsUrl: "https://www.google.com/maps/search/?api=1&query=Aleph+Doha+Residences+Curio+Collection+by+Hilton&query_place_id=ChIJI8FOzL_ERT4RKGWFNo3xOhI",
       website: "https://www.hilton.com/en/hotels/doharqq-aleph-doha-residences/", instagram: "https://www.instagram.com/alephdoha/",
       highlights: ["Check-out الرسمي: 12:00 ظهرًا"] },
-    { id: "d3-4", time: "12:00", timeEnd: "13:00", title: "غداء قبل الطريق", category: "food", desc: "", highlights: [] },
-    { id: "d3-5", time: "13:15", timeEnd: null, title: "الانطلاق إلى الدمام", category: "drive",
-      desc: "الوصول المتوقع: 5:15 م تقريبًا.", eta: "5:15 م تقريبًا", highlights: [] },
+    { id: "d3-4", time: "12:00", timeEnd: "13:00", title: "غداء", category: "food", desc: "", highlights: [] },
+    { id: "d3-5", time: "13:00", timeEnd: "13:30", title: "التوجه إلى Vendôme Mall", category: "drive",
+      desc: "اللوسيل — 30 دقيقة تقريبًا.", duration: "30 دقيقة تقريبًا", highlights: [] },
+    { id: "d3-6", time: "13:30", timeEnd: "15:15", title: "Vendôme Mall", category: "play",
+      desc: "مول فاخر لم نزره بعد في اللوسيل — Jumpino Trampoline Park (25,000 قدم مربع، أكثر من 100 ترامبولين متصلة، مسار نينجا وتسلق) + وقت تسوق حر. مكيف بالكامل، هروب مثالي من حر العصر.",
+      website: "https://placevendomeqatar.com", instagram: "https://www.instagram.com/jumpinoqatar/",
+      mapsUrl: "https://www.google.com/maps/search/?api=1&query=Jumpino+Trampoline+Park+Place+Vendome+Lusail",
+      highlights: ["مول لم نزره بعد", "Jumpino Trampoline Park", "مكيف بالكامل"] },
+    { id: "d3-7", time: "15:15", timeEnd: "15:35", title: "التوجه إلى قناة كارتييه", category: "drive",
+      desc: "اللؤلؤة — 20 دقيقة تقريبًا.", duration: "20 دقيقة تقريبًا", highlights: [] },
+    { id: "d3-8", time: "15:35", timeEnd: "16:30", title: "تمشية في قناة كارتييه", category: "view",
+      desc: "حي القنوات الملوّن بطراز البندقية في اللؤلؤة — مباني ملوّنة وقنوات مائية وجسور، أجواء مسائية أهدأ بعد برودة العصر.",
+      mapsUrl: "https://www.google.com/maps/search/?api=1&query=Qanat+Quartier+The+Pearl+Qatar",
+      highlights: ["حي بطراز البندقية", "قنوات وجسور ملوّنة", "لم نزره بعد"] },
+    { id: "d3-9", time: "16:30", timeEnd: "17:00", title: "التوجه إلى سوق واقف", category: "drive",
+      desc: "30 دقيقة تقريبًا.", duration: "30 دقيقة تقريبًا", highlights: [] },
+    { id: "d3-10", time: "17:00", timeEnd: "18:30", title: "تجول في سوق واقف", category: "culture",
+      desc: "سوق تقليدي بأزقة مسقوفة، محلات وحرف يدوية — فرصة لوقفة حلا (كنافة Al Aker) أو قهوة قبل العشاء.",
+      mapsUrl: "https://www.google.com/maps/search/?api=1&query=Souq+Waqif+Doha",
+      highlights: ["سوق تقليدي", "لم نزره بعد", "حلا وقهوة في الطريق"] },
+    { id: "d3-11", time: "18:30", timeEnd: "19:30", title: "عشاء في سوق واقف", category: "food",
+      desc: "عشاء أخير قبل الطريق — خيارات كثيرة داخل السوق (راجع دليل المطاعم والمقاهي للاقتراحات).",
+      highlights: [] },
+    { id: "d3-12", time: "19:45", timeEnd: null, title: "الانطلاق إلى الدمام", category: "drive",
+      desc: "الوصول المتوقع: منتصف الليل تقريبًا.", eta: "منتصف الليل تقريبًا", highlights: [] },
   ],
 };
 
