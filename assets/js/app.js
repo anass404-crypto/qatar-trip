@@ -1,15 +1,15 @@
-import { el } from "./util.js?v=30";
-import { getParticipant, setParticipant, getAnnouncements, subscribe } from "./store.js?v=30";
-import { tripPhase, currentDayIndex } from "./schedule.js?v=30";
-import { registerRoute, startRouter } from "./router.js?v=30";
-import { renderHome } from "./views/home.js?v=30";
-import { renderDay } from "./views/day.js?v=30";
-import { renderBookings } from "./views/bookings.js?v=30";
-import { renderTrip } from "./views/trip.js?v=30";
-import { renderDining } from "./views/dining.js?v=30";
-import { renderMore } from "./views/more.js?v=30";
-import { renderSuggest } from "./views/suggest.js?v=30";
-import { renderAdmin } from "./views/admin.js?v=30";
+import { el } from "./util.js?v=31";
+import { getParticipant, setParticipant, getAnnouncements, subscribe } from "./store.js?v=31";
+import { tripPhase, currentDayIndex } from "./schedule.js?v=31";
+import { registerRoute, startRouter } from "./router.js?v=31";
+import { renderHome } from "./views/home.js?v=31";
+import { renderDay } from "./views/day.js?v=31";
+import { renderBookings } from "./views/bookings.js?v=31";
+import { renderTrip } from "./views/trip.js?v=31";
+import { renderDining } from "./views/dining.js?v=31";
+import { renderMore } from "./views/more.js?v=31";
+import { renderSuggest } from "./views/suggest.js?v=31";
+import { renderAdmin } from "./views/admin.js?v=31";
 
 const app = document.getElementById("app");
 const topbar = document.getElementById("topbar");
@@ -67,8 +67,8 @@ function renderAnnouncements() {
 const NAV_ITEMS = [
   { href: "#/", icon: "🏠", label: "الرئيسية", match: (p) => p === "/" || p === "" },
   { href: "#/day/0", icon: "🗓️", label: "الجدول", match: (p) => p.startsWith("/day") },
-  { href: "#/bookings", icon: "🎟", label: "الحجوزات", match: (p) => p.startsWith("/bookings") },
-  { href: "#/more", icon: "•••", label: "المزيد", match: (p) => ["/more", "/trip", "/dining", "/suggest", "/admin"].some((x) => p.startsWith(x)) },
+  { href: "#/dining", icon: "🍽️", label: "مطاعم ومقاهي", match: (p) => p.startsWith("/dining") },
+  { href: "#/more", icon: "•••", label: "المزيد", match: (p) => ["/more", "/trip", "/bookings", "/suggest", "/admin"].some((x) => p.startsWith(x)) },
 ];
 
 function renderBottomNav(path) {
