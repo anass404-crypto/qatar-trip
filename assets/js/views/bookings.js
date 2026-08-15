@@ -1,6 +1,6 @@
-import { BOOKINGS } from "../data.js?v=24";
-import { el } from "../util.js?v=24";
-import { getBookingStatus } from "../store.js?v=24";
+import { BOOKINGS } from "../data.js?v=25";
+import { el } from "../util.js?v=25";
+import { getBookingStatus } from "../store.js?v=25";
 
 const STATUS_PILL = {
   "لم يُحجز": "need",

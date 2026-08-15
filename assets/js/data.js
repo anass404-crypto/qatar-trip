@@ -43,7 +43,8 @@ export const CATEGORY_STYLE = {
 
 // صور حقيقية موثّقة (Wikimedia Commons) لأماكن تحققنا منها سابقًا فقط — البقية Placeholder حتى تُستبدل من لوحة الإدارة
 export const REAL_PHOTOS = {
-  katara: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Traditional_buildings_at_Katara_at_night.jpg/1280px-Traditional_buildings_at_Katara_at_night.jpg",
+  katara: "assets/img/katara-dome.jpg",
+  alThurayaInterior: "assets/img/al-thuraya-interior.jpg",
   // صور حقيقية أرسلها المستخدم لكل فعالية — مرفوعة داخل المستودع نفسه
   mia: "assets/img/mia-exterior.jpg",
   qnlLibrary: "assets/img/qnl-library.jpg",
@@ -54,7 +55,7 @@ export const REAL_PHOTOS = {
   pool52: "assets/img/pool-52.jpg",
   rushPaintHouse: "assets/img/rush-paint-house.jpg",
   colorverse: "assets/img/colorverse.jpg",
-  msheireb: "assets/img/msheireb.jpg?v=24",
+  msheireb: "assets/img/msheireb.jpg?v=25",
   trapani: "assets/img/trapani.jpg",
   breakfast: "assets/img/breakfast.jpg",
   planetTeensMia: "assets/img/planet-teens-mia.jpg",
@@ -65,7 +66,7 @@ export const REAL_PHOTOS = {
   quranicGarden: "assets/img/quranic-garden.jpg",
   festivalCity: "assets/img/doha-festival-city.jpg",
   crystalWalkway: "assets/img/crystal-walkway.jpg",
-  brd: "assets/img/brd-restaurant.jpg?v=24",
+  brd: "assets/img/brd-restaurant.jpg?v=25",
 };
 
 // ---------- اليوم 0: الأحد 16 أغسطس — الوصول ومشيرب وكتارا والمدينة التعليمية ----------
@@ -249,7 +250,7 @@ const day2 = {
     { id: "d2-8", time: "17:05", timeEnd: "17:25", title: "التوجه إلى كتارا مبنى 41", category: "drive",
       desc: "التسجيل قبل العرض بنصف ساعة شرط.", cover: "katara", highlights: [] },
     { id: "d2-9", time: "18:00", timeEnd: "18:45", title: "عرض Polaris ثلاثي الأبعاد", category: "space",
-      desc: "في قبة الثريا (Al Thuraya Planetarium) — أول قبة فلكية في قطر، شاشة قطرها 22 مترًا و200 مقعد ونظام عرض Digistar الرقمي. عروض بالعربية والإنجليزية.", cover: "katara",
+      desc: "في قبة الثريا (Al Thuraya Planetarium) — أول قبة فلكية في قطر، شاشة قطرها 22 مترًا و200 مقعد ونظام عرض Digistar الرقمي. عروض بالعربية والإنجليزية.", cover: "alThurayaInterior",
       hours: "يوميًا 8ص–8م (دوام المرفق)",
       phone: "44082067",
       website: "https://althuraya.katara.net", instagram: "https://www.instagram.com/kataraqatar/",

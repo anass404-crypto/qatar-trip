@@ -1,5 +1,5 @@
-import { TRIP, REAL_PHOTOS } from "../data.js?v=24";
-import { el, ar } from "../util.js?v=24";
+import { TRIP, REAL_PHOTOS } from "../data.js?v=25";
+import { el, ar } from "../util.js?v=25";
 
 export function renderTrip(root) {
   const container = el("div", { class: "view-enter" });

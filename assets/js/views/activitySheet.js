@@ -1,10 +1,10 @@
-import { el, fmtRange, ar } from "../util.js?v=24";
-import { getCover, withOverrides, getBlockStatus, buildDayBlocks } from "../schedule.js?v=24";
+import { el, fmtRange, ar } from "../util.js?v=25";
+import { getCover, withOverrides, getBlockStatus, buildDayBlocks } from "../schedule.js?v=25";
 import {
   toggleReaction, reactionCount, hasReacted,
   rateActivity, myRating, activityRatingAverage,
   addChangeRequest, getActivityStatus,
-} from "../store.js?v=24";
+} from "../store.js?v=25";
 
 let overlayEl, sheetEl;
 
@@ -25,7 +25,13 @@ export function closeSheet() {
 function coverNode(item, tall = true) {
   const cover = getCover(item);
   if (cover.type === "image") {
-    return el("div", { class: tall ? "sheet-hero" : "cv" }, el("img", { src: cover.url, alt: "" }));
+    if (tall) {
+      return el("div", { class: "sheet-hero" }, [
+        el("img", { class: "bg", src: cover.url, alt: "" }),
+        el("img", { class: "fg", src: cover.url, alt: "" }),
+      ]);
+    }
+    return el("div", { class: "cv" }, el("img", { src: cover.url, alt: "" }));
   }
   return el("div", { class: (tall ? "sheet-hero" : "cv") + " ph", style: `background:${cover.grad}` }, cover.icon);
 }
