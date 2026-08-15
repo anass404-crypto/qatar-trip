@@ -1,13 +1,13 @@
-import { DAYS, BOOKINGS } from "../data.js?v=27";
-import { el, ar } from "../util.js?v=27";
-import { allItemsOfDay } from "../schedule.js?v=27";
+import { DAYS, BOOKINGS } from "../data.js?v=28";
+import { el, ar } from "../util.js?v=28";
+import { allItemsOfDay } from "../schedule.js?v=28";
 import {
   isAdmin, tryAdminLogin,
   overrideActivity, getActivityOverride, setActivityStatus, getActivityStatus,
   addAnnouncement, removeAnnouncement, getAnnouncements,
   getState, setSuggestionStatus, setChangeRequestStatus,
   setBookingStatus, getBookingStatus,
-} from "../store.js?v=27";
+} from "../store.js?v=28";
 
 function pinGate(root, onOk) {
   const container = el("div", { class: "view-enter section" });

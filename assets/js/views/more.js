@@ -1,5 +1,5 @@
-import { el } from "../util.js?v=27";
-import { getParticipant, clearParticipant, isAdmin, adminLogout, resetAllData } from "../store.js?v=27";
+import { el } from "../util.js?v=28";
+import { getParticipant, clearParticipant, isAdmin, adminLogout, resetAllData } from "../store.js?v=28";
 
 function menuRow(href, icon, label) {
   return el("a", { href, class: "plain-card", style: "display:flex;align-items:center;gap:12px" }, [
