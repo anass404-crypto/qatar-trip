@@ -98,6 +98,9 @@ export const REAL_PHOTOS = {
   megapolis: "assets/img/megapolis.jpg",
   qanatQuartier: "assets/img/qanat-quartier.jpg",
   souqWaqif: "assets/img/souq-waqif.jpg",
+  museum321: "assets/img/321-museum.jpg",
+  cioccolatitaliani: "assets/img/cioccolatitaliani.jpg",
+  museumOfIllusions: "assets/img/museum-of-illusions.jpg",
 };
 
 // ---------- اليوم 0: الأحد 16 أغسطس — الوصول ومشيرب وكتارا والمدينة التعليمية ----------
@@ -203,7 +206,7 @@ const day1 = {
   note: "في ليلة هذا اليوم يجب حجز تذاكر قبة الثريا لأن التذاكر تفتح قبل العرض بيوم فقط.",
   items: [
     { id: "d1-1", time: "08:30", timeEnd: "09:30", title: "فطور", category: "food", cover: "breakfast", desc: "", highlights: [] },
-    { id: "d1-2", time: "12:00", timeEnd: "13:15", title: "متحف الغموض (Museum of Illusions)", category: "art",
+    { id: "d1-2", time: "12:00", timeEnd: "13:15", title: "متحف الغموض (Museum of Illusions)", category: "art", cover: "museumOfIllusions",
       desc: "متحف تفاعلي للخداع البصري والأوهام في The Gate Mall، الخليج الغربي — قريب جدًا من الفندق. غرف وتجارب تصويرية غريبة ومسلية تناسب العائلة كلها، ووقت مثالي قبل فتح Doha Quest.",
       phone: "40206273",
       website: "https://museumofillusions.qa/",
@@ -340,7 +343,7 @@ const day3 = {
       highlights: ["Check-out الرسمي: 12:00 ظهرًا"] },
     { id: "d3-5", time: "12:00", timeEnd: "12:25", title: "التوجه إلى متحف 3-2-1", category: "drive",
       desc: "من الخليج الغربي إلى منطقة أسباير (استاد خليفة الدولي) — 20-25 دقيقة تقريبًا.", duration: "20-25 دقيقة تقريبًا", highlights: [] },
-    { id: "d3-5b", time: "12:25", timeEnd: "13:20", title: "متحف 3-2-1 القطري الأولمبي والرياضي", category: "museum",
+    { id: "d3-5b", time: "12:25", timeEnd: "13:20", title: "متحف 3-2-1 القطري الأولمبي والرياضي", category: "museum", cover: "museum321",
       desc: "متحف داخلي مكيّف بالكامل داخل استاد خليفة الدولي، منطقة أسباير — 7 صالات عرض تفاعلية عن تاريخ الرياضة في قطر والعالم.",
       price: "مجاني للمقيمين ومن هم دون 16 سنة؛ 50 ريال للزوار البالغين، 25 ريال للطلاب",
       hours: "الأحد والاثنين والأربعاء 9ص–7م",
@@ -362,7 +365,7 @@ const day3 = {
       website: "https://olioli.qa", instagram: "https://www.instagram.com/oliolidoha/",
       mapsUrl: "https://www.google.com/maps/search/?api=1&query=OliOli+Katara+Doha",
       highlights: ["135 ريال للطفل، يشمل مرافقًا", "6 قاعات تفاعلية", "وقت الدوام الأربعاء يحتاج تأكيد بالاتصال"] },
-    { id: "d3-8", time: "15:15", timeEnd: "16:00", title: "استراحة في Cioccolatitaliani", category: "food",
+    { id: "d3-8", time: "15:15", timeEnd: "16:00", title: "استراحة في Cioccolatitaliani", category: "food", cover: "cioccolatitaliani",
       desc: "مقهى شوكولاتة إيطالي داخل Snan Food Hall، بنفس مجمع 21 High Street اللي فيه OliOli — بدون أي تنقل إضافي. جيلاتو وكريب ووافل وشوكولاتة ساخنة وقهوة، جلسة داخلية وخارجية مكيّفة.",
       mapsUrl: "https://www.google.com/maps/search/?api=1&query=Cioccolatitaliani+21+High+Street+Katara+Doha",
       highlights: ["نفس مجمع OliOli — بلا تنقل", "جلسة داخلية وخارجية مكيّفة", "جيلاتو وشوكولاتة إيطالية"] },
